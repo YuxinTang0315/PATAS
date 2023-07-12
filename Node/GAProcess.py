@@ -127,7 +127,7 @@ class GA():
 				I.fitness = f
 				history.append(I)
 			temp_correlation, p_value = stats.spearmanr(spear_x, spear_y)
-			with open("/home/ustbai/tangyuxin/self-supervised_learning/on_Graphs/Evolutionary_transformer_cls_input2/spearman.txt", "a+") as f:
+			with open("spearman_cora.txt", "a+") as f:
 				print('temp_correlation:', temp_correlation, file=f)
       
 			if temp_correlation > spear_correlation:
@@ -152,7 +152,7 @@ class GA():
 			self.population.individuals[pos_worst] = copy.deepcopy(children[pos_best])
       
 			if n % 20 == 0:
-				with open('/home/ustbai/tangyuxin/self-supervised_learning/on_Graphs/Evolutionary_transformer_cls_input2/GA_result_cora.txt','a+') as GA_result:
+				with open('result_cora.txt','a+') as GA_result:
 					print('running time: {0}, GA solution input: {1}'.format(n, self.population.best.solution), file=GA_result)
 					print('running time: {0}, GA solution output: {1}'.format(n, self.population.best.evaluation), file=GA_result)
 
