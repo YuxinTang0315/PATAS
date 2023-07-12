@@ -44,7 +44,7 @@ def parse_args():
     parser.add_argument("--embedder", type=str, default="DBYOL")
     parser.add_argument("--dataset", type=str, default="cora", help="Name of the dataset. Supported names are: cora, citeseer")
     parser.add_argument('--checkpoint_dir', type=str, default = './model_checkpoints', help='directory to save checkpoint')
-    parser.add_argument("--root", type=str, default="/home/ustbai/tangyuxin/dataset")
+    parser.add_argument("--root", type=str, default="../dataset")
     parser.add_argument("--task", type=str, default="node", help="Downstream task. Supported tasks are: node, clustering, similarity")
     parser.add_argument("--pred_hid", type=int, default=2048, help="The number of hidden units of layer of the predictor. Default is 512")
     
