@@ -48,7 +48,7 @@ def main():
 	# solve
 	res = g.run(200)
 
-	with open('/home/ustbai/tangyuxin/self-supervised_learning/on_Graphs/Evolutionary_transformer_cls_input2/GA_result_cora.txt','a+') as GA_result:
+	with open('result_cora.txt','a+') as GA_result:
 		print('GA solution input: {0}'.format(res.solution), file=GA_result)
 		print('GA solution output: {0}'.format(res.evaluation), file=GA_result)
 
